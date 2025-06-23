@@ -1,0 +1,96 @@
+/*Kristen Bauer 6-22-2025*/
+
+
+
+/*NEW: transition, transform, display*/
+
+/*REVIEW: font, background, margin, padding, border, shadow, color*/
+html{
+  font-size: 10px;
+  background: url('./background.jpg') bottom center;
+  background-size: cover;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.keys{
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key{
+  border:4px solid black;
+  border-radius:5px;
+  margin: 1rem;
+  font-size:1.5rem;
+  padding:1rem .5rem;
+  transition:all .27s;
+  width: 100px;
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  text-shadow:0 0 5px black;
+}
+
+.playing{
+  transform:scale(1.1);
+  border-color:#ffc600;
+  box-shadow: 0 0 10px;
+}
+
+kbd{
+  display:block;
+  font-size: 40px;
+}
+
+.sound {
+  font-size:1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color:#ffc600;
+}
+
+/*added background for each key*/
+.clap {
+  background: url('./image/clap.PNG') center;
+  background-size: 170px;
+}
+.hihat {
+  background: url('./image/hihat.jpg') center;
+  background-size: 180px;
+}
+.kick {
+  background: url('./image/kick.jpg') center;
+  background-size: 120px;
+}
+.openhat {
+  background: url('./image/openhat.jpg') center;
+  background-size: 180px;
+}
+.boom {
+  background: url('./image/boom.jpg') top center;
+  background-size: 180px;
+}
+.ride {
+  background: url('./image/ride.jpg') center;
+  background-size: 180px;
+}
+.snare {
+  background: url('./image/snare.jpg') center;
+  background-size: 180px;
+}
+.tom {
+  background: url('./image/tom.jpg') center;
+  background-size: 180px;
+}
+.tink {
+  background: url('./image/tink.jpg') center;
+  background-size: 180px;
+}
