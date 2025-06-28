@@ -28,6 +28,9 @@ var anotherOne = {
   nameLast: 'Nivlac', //Backwards
   Sal: 130000, //How did he manage that, huh? Give it to me. 
 }
+console.log(anotherOne.nameFirst);
+console.log(anotherOne.nameLast);
+console.log(anotherOne.Sal);
 
 
 
