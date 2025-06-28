@@ -24,8 +24,8 @@ var frienSalary = [85000, 95000, 100000]; //"modest"
 console.log(frienSalary);
 
 var anotherOne = {
-  nameFirst: Calvin,
-  nameLast: Nivlac, //Backwards
+  nameFirst: 'Calvin',
+  nameLast: 'Nivlac', //Backwards
   Sal: 130000, //How did he manage that, huh? Give it to me. 
 }
 
