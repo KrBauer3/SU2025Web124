@@ -17,7 +17,7 @@ console.log(dreamSalary);
 var vetStat = false;
 console.log(vetStat);
 
-var friends = [Laz, Snarky, Juice]; //Gamer names amIright
+var friends = ["Laz", "Snarky", "Juice"]; //Gamer names amIright
 console.log(friends);
 
 var frienSalary = [85000, 95000, 100000]; //"modest"
