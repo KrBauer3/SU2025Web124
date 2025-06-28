@@ -1,0 +1,112 @@
+/*Kristen Bauer 6-28-2025*/
+#wrapper {
+  width: 80%;
+  padding: 2em;
+  margin-top:2%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 960px;
+  max-width: 2048px;
+  background-color: #FFFFFF;
+/*  box-shadow: 3px 3px #00b4d8;*/
+}
+
+html {
+  height: 200%;
+  color: #00b4d8;
+  background-color: #ffffff;
+  background-image: linear-gradient(#FFFFFF, #00b4d8);
+}
+
+/*.box {
+  width: 70%;
+  margin: 0 auto 0 auto;
+  padding: 2em;
+  margin-bottom: 2em;
+  background-color: #FFFFFF;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #00b4d8;
+}*/
+
+#AllDone {
+  width: 70%;
+  margin-top: 30%;
+  margin-bottom:30%;
+  margin-left: 15%;
+}
+
+@media (max-width:1250px) {
+  #wrapper {
+    padding: 1em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 960px;
+    max-width: 2048px;
+    background-color: #FFFFFF;
+    /*    box-shadow: 3px 3px #00b4d8;*/
+  }
+
+  html {
+    height: 200%;
+    color: #00b4d8;
+    background-color: #ffffff;
+    background-image: linear-gradient(#FFFFFF, #00b4d8);
+  }
+
+/*  .box {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding: 2em;
+    margin-bottom: 1em;
+    background-color: #FFFFFF;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #00b4d8;
+  }*/
+
+  #AllDone {
+    width: 80%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+  }
+
+}
+
+@media (max-width: 800px) {
+  #wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+    max-width: 2048px;
+    background-color: #FFFFFF;
+    box-shadow: none;
+  }
+
+    html {
+    height: 200%;
+    color: #ffffff;
+    background-color: #ffffff;
+    background-image:none;
+  }
+
+/*  .box {
+    width: 90%;
+    margin: 0 auto 0 auto;
+    padding: 2em;
+    margin-bottom: 1em;
+    background-color: #00b4d8;
+  }*/
+
+  #AllDone {
+    width: 90%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 5%;
+  }
+
+}
+
