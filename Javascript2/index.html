@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--Kristen Bauer 7-6-25-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scoped CSS Variables and JS</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<!--Learned in HTML: span, labels, type-->
+<body>
+  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+
+  <div class="controls">
+    <label for="spacing">Outline:</label>
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+     <!--Shadow is added-->
+    <label for="shadow">Shadow:</label>
+    <input id="shadow" type="range" name="shadow" min="10" max="200" value="10" data-sizing="px">
+
+    <p></p>
+
+    <label for="base">Outline Color</label>
+    <input id="base" type="color" name="base" value="#ffc600">
+
+    <!--Shadow color is added-->
+    <label for="sColor">Shadow Color</label>
+    <input id="sColor" type="color" name="sColor" value="#11c600">
+  </div>
+
+  <!--<img src="https://source.unsplash.com/7bwQXzbF6KE/800x500"> This image didn't work'-->
+  <img src="https://images.unsplash.com/photo-1596733430284-f7437764b1a9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+       width="800">
+
+
+  <!--Things learned in CSS: Everything in :root-->
+  <style>
+
+    :root {
+      --base: #ffc600;
+      --spacing: 10px;
+      --blur: 10px;
+/*      The below is added*/
+      --shadow: 10px;
+      --sColor: #11c600;
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur));
+      /*      The below is added*/
+      box-shadow: var(--shadow) var(--shadow) var(--sColor);
+    }
+
+    .hl {
+      color: var(--base);
+    }
+
+    /*
+      misc styles, nothing to do with CSS variables
+    */
+
+    body {
+      text-align: center;
+      background: #193549;
+      color: white;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
+
+    .controls {
+      margin-bottom: 50px;
+    }
+
+    input {
+      width: 100px;
+    }
+  </style>
+
+
+  <!--Things learned in Java Script: EventListener 'change' and 'mousemove',
+        still learning 'this', '.controls input', using an || statement for a const,
+        setting the property of document style elements is all new-->
+  <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      //console.log(this.value);
+      const suffix = this.dataset.sizing || '';
+      //console.log(suffix);
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+
+
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+  </script>
+
+</body>
+</html>
