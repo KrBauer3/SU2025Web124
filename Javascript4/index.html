@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Kristen Bauer 7-20-25-->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +7,9 @@
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
 <body>
+<!--canvas was all new info for me.-->
 <canvas id="draw" width="800" height="800"></canvas>
+<!--New things learned: canvas, all the ctx, pretty much the whole draw function, mouseup, and mouse down-->
 <script>
   const canvas = document.querySelector('#draw');
   const ctx = canvas.getContext('2d');
@@ -16,7 +19,7 @@
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
   ctx.lineWidth = 25;
-  //ctx.globalCompositeOperation = 'multiply'; Didn't like this.
+  //ctx.globalCompositeOperation = 'multiply'; Didn't like this. Tried overlay and lighten, but still didn't like. 
 
   let isDrawing = false;
   let lastX = 0;
@@ -28,7 +31,7 @@
   function draw(e) {
     //console.log(e);
     if (!isDrawing) return;
-    ctx.strokeStyle = `hsl(${hue}, 45%, 75%)`; //made pastel
+    ctx.strokeStyle = `hsl(${hue}, 55%, 75%)`; //made pastel (new code)
     ctx.beginPath();
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(e.offsetX, e.offsetY);
@@ -36,6 +39,8 @@
     lastX = e.offsetX;
     lastY = e.offsetY;
     //ctx.lineWidth = hue/2;
+
+    //this if statement is new code. Only cool colors here.
     if (hue > 270) {
       setHue = false;
     }
