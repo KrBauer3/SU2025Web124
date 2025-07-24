@@ -21,18 +21,18 @@
     //Things learned, all the extra console commands: interpolated, styled, warn,
     //error, info, assert, dir, group, count, time, and table.
 
-    console.time('Reading Log');
+    console.time('Reading Log');//new code
 
     console.groupCollapsed('Hello');//new
     // Regular
     console.log('Hello');
-    console.count('Hello'); //This is new.
+    console.count('Hello'); //new.
 
     // Interpolated
-    var world = 'World'; //This is new.
+    var world = 'World'; //new.
     console.log('Hello %s.', world);
     //console.log(`Hello ${world}.`);
-    console.count(world); //This is new.
+    console.count(world); //new.
 
     // Styled
     console.log('%c Hello World.', 'font-size:20px; color:red'); //new: changed the style
@@ -64,7 +64,7 @@
     // Viewing DOM Elements
     console.log('Hello');
     console.dir(world);
-    console.count('Hello World');
+    console.count('Hello World');//new
 
     // Grouping together
     dogs.forEach(dog => {
@@ -93,7 +93,7 @@
     //table
     console.table(dogs);
 
-    console.timeEnd('Reading Log');
+    console.timeEnd('Reading Log');//new
 
   </script>
 </body>
