@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    //Things learned, all the extra console commands: interpolated, styled, warn,
+    //error, info, assert, dir, group, count, and time
+
+    console.groupCollapsed('Hello');//new
+    // Regular
+    console.log('Hello');
+    console.count('Hello'); //This is new.
+
+    // Interpolated
+    var world = 'World'; //This is new.
+    console.log('Hello %s.', world);
+    //console.log(`Hello ${world}.`);
+    console.count(world); //This is new.
+
+    // Styled
+    console.log('%c Hello World.', 'font-size:20px; color:red'); //new: changed the style
+    console.count('Hello'); //new
+    console.groupEnd('Hello');//new
+
+    // warning!
+    console.warn('Stop counting Hello World.');
+
+    // Error :|
+    console.error('NO!');
+    console.count('Hello World.') //new
+
+    // Info
+    console.info('Hello means the same thing and hola.') //but how do I get the tilde?
+    console.count('Hello');
+
+    // Testing
+    console.assert('Hello' === 'World', 'This had better be false.');
+    console.count('Hello World.') //new
+
+    //const p = document.querySelector('p');
+    //console.assert(p.classList.contains('ouch'),
+    //  'Wrong word.');
+
+    // clearing
+    //console.clear();
+
+    // Viewing DOM Elements
+    console.log(p);
+    console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}.`);
+      console.log(`${dog.name} is ${dog.age} years old.`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old.`);
+      console.groupEnd(`${dog.name}`);
+    })
+
+    // counting
+    console.count('Hello');
+    console.count(world);
+    console.count('Hello World');
+
+    // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(deta => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      })
+
+    //table
+    console.table(dogs);
+
+  </script>
+</body>
+</html>
