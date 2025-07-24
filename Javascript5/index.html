@@ -19,7 +19,9 @@
     }
 
     //Things learned, all the extra console commands: interpolated, styled, warn,
-    //error, info, assert, dir, group, count, and time
+    //error, info, assert, dir, group, count, time, and table.
+
+    console.time('Reading Log');
 
     console.groupCollapsed('Hello');//new
     // Regular
@@ -60,8 +62,9 @@
     //console.clear();
 
     // Viewing DOM Elements
-    console.log(p);
-    console.dir(p);
+    console.log('Hello');
+    console.dir(world);
+    console.count('Hello World');
 
     // Grouping together
     dogs.forEach(dog => {
@@ -78,16 +81,19 @@
     console.count('Hello World');
 
     // timing
-    console.time('fetching data');
-    fetch('https://api.github.com/users/wesbos')
-      .then(data => data.json())
-      .then(deta => {
-        console.timeEnd('fetching data');
-        console.log(data);
-      })
+    //console.time('fetching data');
+    //fetch('https://krbauer3.github.io/SU2025Web124/Javascript2/index.html')
+    //  .then(data => data.json())
+    //  .then(deta => {
+    //    console.timeEnd('fetching data');
+    //    console.log(data);
+    //  }) 
+    //this block of code did not work, so I made a different timer. It's much shorter.
 
     //table
     console.table(dogs);
+
+    console.timeEnd('Reading Log');
 
   </script>
 </body>
