@@ -1,0 +1,68 @@
+/*Kristen Bauer 7-25-2025*/
+#wrapper {
+  width: 80%;
+  padding: 2em;
+  margin-top: 2%;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 960px;
+  max-width: 2048px;
+  background-color: #FFFFFF;
+  box-shadow: 3px 3px #5C00CC;
+}
+
+label {
+  font-family: Helvetica, sans-serif;
+}
+
+p {
+  font-family: Helvetica, sans-serif; 
+}
+
+html {
+  height: 200%;
+  color: #5C00CC;
+  background-color: #ffffff;
+  background-image: linear-gradient(#FFFFFF, #5C00CC);
+}
+
+
+@media (max-width:1250px) {
+  #wrapper {
+    padding: 1em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 960px;
+    max-width: 2048px;
+    background-color: #FFFFFF;
+    box-shadow: none;
+  }
+
+  html {
+    height: 200%;
+    color: #5C00CC;
+    background-color: #ffffff;
+    background-image: linear-gradient(#FFFFFF, #5C00CC);
+  }
+}
+
+@media (max-width: 800px) {
+  #wrapper {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 300px;
+    max-width: 2048px;
+    background-color: #FFFFFF;
+    box-shadow: none;
+  }
+
+  html {
+    height: 200%;
+    color: #5C00CC;
+    background-color: #ffffff;
+    background-image: none;
+  }
+}
+
