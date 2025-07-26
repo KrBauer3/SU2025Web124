@@ -5,7 +5,7 @@
 "use strict"; //"use strict";
 
 
-var num = Number(document.getElementById('num').value); //had to google
+var num; //= Number(document.getElementById('num').value); //had to google value
 console.log(num);
 
 function add() {
@@ -57,6 +57,7 @@ function div() {
 }
 
 function run() {
+  num = Number(document.getElementById('num').value);
   add();
   sub();
   mult();
